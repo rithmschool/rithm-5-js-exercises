@@ -8,21 +8,21 @@ For a lot of these, there are many different ways to acheive the desired layout.
 
 #### Exercise 1
 
-![CSS Positioning Mock 1](../images/mock1.png)
+![CSS Positioning Mock 1](../images/css_mock1.png)
 
 #### Exercise 2
 
-![CSS Positioning Mock 2](../images/mock2.png)
+![CSS Positioning Mock 2](../images/css_mock2.png)
 
 #### Exercise 3
 
-![CSS Positioning Mock 3](../images/mock3.png)
+![CSS Positioning Mock 3](../images/css_mock3.png)
 
 #### Exercise 4
 
-![CSS Positioning Mock 4](../images/mock4.png)
+![CSS Positioning Mock 4](../images/css_mock4.png)
 
 #### Exercise 5
 
-![CSS Positioning Mock 5](../images/mock5.png)
+![CSS Positioning Mock 5](../images/css_mock5.png)
 
