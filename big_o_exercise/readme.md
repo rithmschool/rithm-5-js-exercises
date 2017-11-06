@@ -2,6 +2,8 @@
 
 ### Part 1
 
+i don't understand anything!!! :(
+
 Simplify the following big O expressions as much as possible:
 
 1. `O(n + 10)`
