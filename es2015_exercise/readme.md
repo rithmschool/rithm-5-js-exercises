@@ -3,17 +3,6 @@
 Convert the following es5 code blocks into es2015 code:
 
 ```javascript
-var person = {
-    fullName: "Harry Potter",
-    sayHi: function(){
-        setTimeout(function(){
-            console.log("Your name is " + this.fullName)
-        }.bind(this),1000)
-    }
-}
-```
-
-```javascript
 var name = "Josie"
 console.log("When " + name + " comes home, so good")
 ```
