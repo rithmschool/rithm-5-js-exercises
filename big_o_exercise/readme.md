@@ -1,5 +1,7 @@
 # Big O Notation Exercises
 
+the answers are for you to decide!! no spoilers.
+
 ### Part 1
 
 Simplify the following big O expressions as much as possible:
