@@ -25,6 +25,7 @@ Simplify the following big O expressions as much as possible:
 10. `O(n + n^(1/2) + n^2 + n * log(n)^10)`
     `O(n^2)`
 
+
 ### Part 2
 
 Determine the time and space complexities for each of the following functions. If you're not sure what these functions do, copy and paste them into the console and experiment with different inputs!
@@ -38,8 +39,11 @@ function logUpTo(n) {
         console.log(i);
     }
 }
+
 time: O(n) / linear time
 space: O(1) / constant space
+
+
 
 // 2. 
 
@@ -48,8 +52,10 @@ function logAtMost10(n) {
         console.log(i);
     }
 }
+
 time: O(1) / constant time
 space: O(1) / constant space
+
 
 // 3. 
 
@@ -58,8 +64,10 @@ function logAtLeast10(n) {
         console.log(i);
     }
 }
+
 time: O(n) / linear time
 space: O(1) / constant space
+
 
 // 4.
 
@@ -72,8 +80,10 @@ function onlyElementsAtEvenIndex(array) {
     }
     return newArray;
 }
+
 time: O(n) / linear time
 space: O(n) / linear space
+
 
 // 5. 
 
@@ -88,6 +98,8 @@ function subtotals(array) {
     }
     return subtotalArray;
 }
+
 time: O(n^2) / quadratic time
 space: O(n) / linear space
+
 ```
