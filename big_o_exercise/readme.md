@@ -40,7 +40,7 @@ function logAtMost10(n) {
         console.log(i);
     }
 }
-TIME: O(1) [though linear until 10?]
+TIME: O(1) 
 SPACE: O(1)
 
 
@@ -51,7 +51,7 @@ function logAtLeast10(n) {
         console.log(i);
     }
 }
-TIME: O(n) [constant until 10?]
+TIME: O(n)
 SPACE: O(1)
 
 
