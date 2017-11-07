@@ -13,7 +13,7 @@ Simplify the following big O expressions as much as possible:
 7. `O(1000 * n * log(n) + n)` - O(n log(n))
 8. `O(2^n + n^2)` - O(2^n)
 9. `O(5 + 3 + 1)` - O(1)
-10. `O(n + n^(1/2) + n^2 + n * log(n)^10)` - O(n^2 log(n))
+10. `O(n + n^(1/2) + n^2 + n * log(n)^10)` - O(n^2)
 
 ### Part 2
 
@@ -21,7 +21,7 @@ Determine the time and space complexities for each of the following functions. I
 
 
 ```js
-// 1.
+// 1.	Time - O(n)  Space - O(1)
 
 function logUpTo(n) {
     for (var i = 1; i <= n; i++) {
@@ -29,7 +29,8 @@ function logUpTo(n) {
     }
 }
 
-// 2. 
+
+// 2. Time - O(1) Space - O(1)
 
 function logAtMost10(n) {
     for (var i = 1; i <= Math.min(n, 10); i++) {
@@ -37,7 +38,7 @@ function logAtMost10(n) {
     }
 }
 
-// 3. 
+// 3. Time - O(n) Space - O(1)
 
 function logAtLeast10(n) {
     for (var i = 1; i <= Math.max(n, 10); i++) {
@@ -45,7 +46,7 @@ function logAtLeast10(n) {
     }
 }
 
-// 4.
+// 4. Time - O(n) Space - O(n)
 
 function onlyElementsAtEvenIndex(array) {
     var newArray = Array(Math.ceil(array.length / 2));
@@ -57,7 +58,7 @@ function onlyElementsAtEvenIndex(array) {
     return newArray;
 }
 
-// 5. 
+// 5. Time - O(n^2) Space - O(n)
 
 function subtotals(array) {
     var subtotalArray = Array(array.length);
