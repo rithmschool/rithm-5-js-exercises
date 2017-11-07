@@ -40,7 +40,7 @@ function logAtMost10(n) {
     }
 }
 
-time = linear up to 9, and constant afterwards 
+time = linear up to 10, and constant afterwards 
 space = constant
 
 
