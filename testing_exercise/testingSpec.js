@@ -94,6 +94,12 @@ describe("acceptNumbersOnly", function() {
 
 
 describe("mergeArrays", function() {
+  it("returns a result which is an array", function(){
+    expect(mergeArrays([2,1],[3,4])).to.be.an('array'); 
+  });
+  it("returns a sorted array", function(){
+      expect(mergeArrays([7,3],[15,1,17])).to.have.ordered.members([1,3,7,15,17]);
+  });
   it("takes in two arrays and returns one array with the values sorted", function(){
     expect(mergeArrays([2,1],[3,4])).to.deep.equal([1,2,3,4]); 
   });
@@ -101,20 +107,14 @@ describe("mergeArrays", function() {
   it("includes the original array's members in return array", function(){
       expect(mergeArrays([2,1],[3,4])).to.include.deep.members([1,2,3,4]);
   }); 
-  /* WORKING ON THIS
-  it("has two arguments as input", function(){
-      expect(mergeArrays([2,1],[3,4])).to.have(arguments.length === 2);
-    });
-  it("returns only one array as output", function(){
-    expect(mergeArrays([2,1],[3,4])).to.have.lengthOf(1);
-  });  
-  */
-
 })
 
 
 
 describe("mergeObjects", function() {
+  it("returns a result which is an object", function(){
+    expect(mergeObjects(obj1,obj2)).to.be.an('object');
+  }); 
   it("takes in two objects and returns one object with the keys and values combined", function(){
     expect(mergeObjects(obj1,obj2)).to.deep.equal({
       test: "thing",
@@ -123,59 +123,13 @@ describe("mergeObjects", function() {
     }); 
   });
   
-  it("includes the original array's members in return array", function(){
-      expect(mergeObjects([2,1],[3,4])).to.include.deep.members([1,2,3,4]);
-  }); 
-  /* WORKING ON THIS
-  it("has two arguments as input", function(){
-      expect(mergeObjects([2,1],[3,4])).to.have(arguments.length === 2);
-    });
-  it("returns only one array as output", function(){
-    expect(mergeObjects([2,1],[3,4])).to.have.lengthOf(1);
-  });  
-  */
-
+  it("includes all second parameter's properties in return object", function(){
+      expect(mergeObjects(obj1,obj2)).to.deep.include(obj2);
+  });
+  it("prioritizes second parameter's key's value and overrides this value if first parameter had same key", function(){
+    expect(mergeObjects(obj1,obj2)['num']).to.equal(55);
+  });     
 })
-
-
-
-
-
-
-/*
-- Write a function called `mergeObjects` which takes in two objects and return an object with 
-the keys and values combined. If the second parameter has the same key - it should override 
-first one. There is a built in function called `Object.assign` - research it, but do not use
- it, try to do this on your own!
-
-```javascript
-var obj1= {
-    name: "Foo",
-    num: 33
-}
-var obj2 = {
-    test: "thing",
-    num: 55
-}
-mergeObjects(obj1, obj2) 
-
-{
-    name: "Foo",
-    test: "thing",
-    num: 55
-}
-
-```
-*/
-
-
-
-
-
-
-
-
-
 
 
 
