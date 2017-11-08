@@ -24,7 +24,21 @@ describe("Arrays", function(){
 });
 */
 
+var arr;
+var obj1 = {};
+var obj2 = {};
 
+beforeEach(function(){
+  arr = [1,2,3];
+  obj1 = {
+    name: "Foo",
+    num: 33
+  }
+  obj2 = {
+    test: "thing",
+    num: 55
+  }
+});
 
 describe("replaceWith", function(){
   it("returns a string", function(){
@@ -41,11 +55,7 @@ describe("replaceWith", function(){
   });
 });
 
-var arr;
 
-beforeEach(function(){
-  arr = [1,2,3];
-});
 
 describe("expand", function(){
   it("returns result with result.length of (n * arr.length)", function(){
@@ -81,13 +91,6 @@ describe("acceptNumbersOnly", function() {
 
 })
 
-/*
-- Write a function called `mergeArrays` which takes in two arrays and returns one array with
- the values sorted
-
-```javascript
-mergeArrays([2,1],[3,4]) // [1,2,3,4]
-*/
 
 
 describe("mergeArrays", function() {
@@ -111,7 +114,59 @@ describe("mergeArrays", function() {
 
 
 
+describe("mergeObjects", function() {
+  it("takes in two objects and returns one object with the keys and values combined", function(){
+    expect(mergeObjects(obj1,obj2)).to.deep.equal({
+      test: "thing",
+      name: "Foo",
+      num: 55
+    }); 
+  });
+  
+  it("includes the original array's members in return array", function(){
+      expect(mergeObjects([2,1],[3,4])).to.include.deep.members([1,2,3,4]);
+  }); 
+  /* WORKING ON THIS
+  it("has two arguments as input", function(){
+      expect(mergeObjects([2,1],[3,4])).to.have(arguments.length === 2);
+    });
+  it("returns only one array as output", function(){
+    expect(mergeObjects([2,1],[3,4])).to.have.lengthOf(1);
+  });  
+  */
 
+})
+
+
+
+
+
+
+/*
+- Write a function called `mergeObjects` which takes in two objects and return an object with 
+the keys and values combined. If the second parameter has the same key - it should override 
+first one. There is a built in function called `Object.assign` - research it, but do not use
+ it, try to do this on your own!
+
+```javascript
+var obj1= {
+    name: "Foo",
+    num: 33
+}
+var obj2 = {
+    test: "thing",
+    num: 55
+}
+mergeObjects(obj1, obj2) 
+
+{
+    name: "Foo",
+    test: "thing",
+    num: 55
+}
+
+```
+*/
 
 
 
