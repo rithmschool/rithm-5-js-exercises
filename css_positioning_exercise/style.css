@@ -21,3 +21,76 @@
   height: 100px;
   background-color: blue;
 }
+
+/* Exercise 1
+
+.two,
+.three,
+.four {
+  position: relative;
+  left: 50px;
+  top: 50px;
+}
+*/
+
+/*  Exercise 2
+
+.four {
+  position: fixed;
+  right: 0px;
+}
+*/
+
+/* Exercise 3
+
+div {
+  position: relative;
+}
+
+.three {
+  top: 200px;
+  left: 400px;
+}
+
+.four {
+  top: 100px;
+}
+*/
+
+/* Exercise 4
+
+div {
+  position: relative;
+}
+
+.two,
+.four {
+  top: 100px;
+  left: 100px;
+}
+
+.three {
+  top: -100px;
+  left: -100px;
+}
+*/
+
+/* Exercise 5
+
+.two {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.three {
+  position: absolute;
+  bottom: 300px;
+}
+
+.four {
+  position: fixed;
+  top: 7px;
+  left: 7px;
+}
+*/
