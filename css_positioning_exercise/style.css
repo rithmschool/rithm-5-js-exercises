@@ -34,12 +34,13 @@
 }
 */
 
-/* EXERCISE 2
+/*EXERCISE 2 
 .four {
-  position: absolute;
-  z-index: -1;
+  position: relative;
+  left: 1200px;
 }
 */
+
 
 /*EXERCISE 3
 body {
@@ -76,15 +77,22 @@ body {
 }*/
 
 /* EXERCISE 5 
-I wanted to use z-indices, but that wasn't happening
 
 .two {
   position: relative;
-  right: 400px;
+  left: 1000px;
+  top: 350px;
+}
+
+.three {
+  position: relative;
+  bottom: 200px;
 }
 .four {
   position: relative;
-  left: 400px;
-} */
+  right: 1000px;
+  bottom: 150px;
+} 
+*/
 
 
