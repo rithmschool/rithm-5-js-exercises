@@ -26,3 +26,57 @@ function productOfArray(arr) {
 }
 
 
+/*
+- Write a function called `collectStrings` which accepts an object and returns an array of all
+ the values in the object that have a typeof string
+
+```
+var obj = {
+    stuff: "foo",
+    data: {
+        val: {
+            thing: {
+                info: "bar",
+                moreInfo: {
+                    evenMoreInfo: {
+                        weMadeIt: "baz"
+                    }
+                }
+            }
+        }
+    }
+}
+
+collectStrings(obj) // ["foo", "bar", "baz"])
+```
+*/
+
+function collectStrings(obj,result) {
+  //create result arr
+  //base case? until no keys left (select smaller subset each time)
+  if (typeof result == 'undefined') {
+    result = []
+  }
+  
+  //for in loop to go thru keys 
+  //if "typeof obj['data']['val']" === 'object' then keep recursion going, if 
+  //typeof obj['data']['val'] === 'string' then push  obj['data']['val'] to result.
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      if (typeof obj[key] === 'string') {
+        // store string in result   
+        result.push(obj[key]); 
+      }
+
+      else if (typeof obj[key] === 'object') {
+        //make input different for recursion?
+        collectStrings(obj[key], result);
+      }
+    }
+  } 
+  return result;
+}
+
+  
+
+
