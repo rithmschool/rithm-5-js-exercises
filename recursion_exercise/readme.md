@@ -9,6 +9,8 @@ For this exercise you **MUST** use recursion to solve these problems. Some of th
 ```javascript
 productOfArray([1,2,3]) // 6
 productOfArray([1,2,3,10]) // 60
+productOfArray([0,1,2,3]) // 0
+productOfArray([1,-2,3]) //-6
 ```
 
 - Write a function called `collectStrings` which accepts an object and returns an array of all the values in the object that have a typeof string
