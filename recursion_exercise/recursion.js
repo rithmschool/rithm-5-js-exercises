@@ -32,3 +32,13 @@ function contains(obj, val) {
   }
   return false;
 }
+
+function contains(obj, val) {
+  for (var prop in obj) {
+    return obj[prop] === val ?
+      true :
+      typeof obj[prop] === 'object' ?
+      contains(obj[prop], val) :
+      false
+  }
+}
