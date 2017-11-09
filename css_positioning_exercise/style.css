@@ -21,3 +21,78 @@
   height: 100px;
   background-color: blue;
 }
+
+/* EXERCISE 1 
+.one {
+  position: relative;
+}
+
+.two, .three, .four {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+*/
+
+/*EXERCISE 2 
+.four {
+  position: relative;
+  left: 1200px;
+}
+*/
+
+
+/*EXERCISE 3
+body {
+  margin: 0;
+}
+.three {
+  position: absolute;
+  top: 200px;
+  left: 400px;
+}
+.four {
+  position: absolute;
+  top: 100px;
+}*/
+
+/*EXERCISE 4
+.one {
+  position: relative;
+}
+.two {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+.three {
+  position: relative;
+  bottom: 100px;
+  right: 100px;
+}
+.four {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}*/
+
+/* EXERCISE 5 
+
+.two {
+  position: relative;
+  left: 1000px;
+  top: 350px;
+}
+
+.three {
+  position: relative;
+  bottom: 200px;
+}
+.four {
+  position: relative;
+  right: 1000px;
+  bottom: 150px;
+} 
+*/
+
+
