@@ -55,3 +55,10 @@ function search(array, val){
 
 }
 
+function binarySearch(){
+
+}
+
+function stringyNumbers(){
+	
+}
