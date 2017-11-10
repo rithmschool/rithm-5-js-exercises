@@ -18,8 +18,8 @@ describe("replaceWith", function(){
 
 describe("expand", function(){
   it('should return an array with as many numbers specified', function(){
-    expect(expand([1,2,3], 3)).to.equal([1,2,3,1,2,3,1,2,3]);
-    expect(expand(['foo', 'test'], 1)).to.equal(['foo','test']);
+    expect(expand([1,2,3],3)).to.deep.equal([1,2,3,1,2,3,1,2,3]);
+    expect(expand(['foo', 'test'], 1)).to.deep.equal(['foo','test']);
   })
 })
 
@@ -33,7 +33,7 @@ describe("acceptNumbersOnly", function(){
 
 describe("mergeArrays", function(){
   it('should return an array with the values sorted', function(){
-    expect(mergeArrays([2,1],[3,4])).to.equal([1,2,3,4]);
+    expect(mergeArrays([2,1],[3,4])).to.deep.equal([1,2,3,4]);
   })
 })
 
@@ -48,7 +48,7 @@ describe("mergeObjects", function(){
       num: 55
     }
   it('should return object with keys and values combined', function(){
-    expect(mergeObjects(obj1, obj2)).to.equal({
+    expect(mergeObjects(obj1, obj2)).to.deep.equal({
         name: "Foo",
         test: "thing",
         num: 55
