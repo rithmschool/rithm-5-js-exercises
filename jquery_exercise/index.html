@@ -28,20 +28,20 @@
 				</ul>
 			</div>
 		</nav>
-		<form class="p-3 bg-secondary">
+		<form style="display: none" class="p-3 bg-secondary d-flex flex-column">
 			<div class="form-group">
 				<label for="title">Title:</label>
-				<input type="text" class="form control" id="title" aria-describedby="name of story to submit" name="storyTitle" placeholder="Enter your title here..." class="bg-secondary">
+				<input type="text" class="form control text-dark" style="width: 100%" id="title" aria-describedby="title" name="storyTitle" placeholder="Enter your title here...">
 			</div>
 			<div class="form-group">
 				<label for="site">Website:</label>
-				<input type="text" class="form control" id="site" aria-describedby="name of story to submit" name="storyWebsite" placeholder="Enter your title here..." class="bg-secondary">
+				<input type="text" class="form control text-dark" style="width: 100%" id="site" aria-describedby="website" name="storyWebsite" placeholder="Which website..."">
 			</div>
 			<div class="form-group">
 				<label for="storyText">Text:</label>
-				<input type="text" class="form control" id="storyText" aria-describedby="name of story to submit" name="storyText" placeholder="Enter your title here..." class="bg-secondary">
+				<textarea class="form control" style="width: 100%" id="storyText" aria-describedby="text area" name="storyText" rows="5"> Enter your story here...</textarea>
 			</div>
-			<button type="submit" class="btn bg-light">Submit</button>
+			<button type="submit" class="align-self-center" btn-sm bg-light" style="width: 33%; background-color: darkorange">Submit</button>
 		</form>
 		
 	</section>
