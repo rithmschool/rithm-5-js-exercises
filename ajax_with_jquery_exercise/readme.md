@@ -1,107 +1,40 @@
-## AJAX With jQuery Exercise
+# AJAX with jQuery Exercise: Hack-or-Snooze
 
-In this exercise, we'll rework our Hacker News clone to use AJAX. We'll use a couple of APIs: one is the Hacker News API itself, and the other is a custom stories API used to log in users and track their favorites. The stories api has authentication, so you must login first in order to make requests to it.  You will have to make a POST request to post a new favorite to the api.
+### In this exercise, we'll rework our Hacker News clone to use AJAX.
+### We will be utilizing Rithm's very own [Hack-or-Snooze API](https://hackorsnoozeapi.docs.apiary.io/#). 
 
-__Requirements__
+## Requirements
 
-* Uses the [Hacker News API](https://github.com/HackerNews/API) to display top stories (up to some limit, say 10 or 20).
-* The top stories page should have a button to log in or sign up for an account.
-* When the user logs in or signs up succesfully, a token sent back from the server should get stored in `localStorage`. This token will be used to authenticate the user on subsequent requests to the stories API. (Examples of requests to this API are below.)
-* When a user is logged in, each top story should have a button to favorite it. This sends a POST request to the stories API creating a new favorite for the logged-in user.
-* On a separate page, use the stories api to display a list of favorites.
-* Allow the user to delete a favorite from the list of favorites.
-* Have navigation between the favorites page and the top stories page.
-* A favorite should save the story id, story title, who the story is by, and the url of the story.
-* The list of stories on the favorite page or on the top stories page, should link to the actual story.
+The requirements below are listed as Agile/Scrum requirements that you might see on a software engineering kanban board or task list. Some of these tasks are phrased as "User Stories", which means they are written from the perspective of a user/customer.
 
-__BONUS__
+1. As a user, I can see at least 10 latest stories on the homepage which link to the actual stories.
+1. As a user, I can login or signup for an account on the homepage.
+1. (Technical) When the user logs in successfully, the server responds with a JSON Web Token (JWT) that is required for other requests. The token should be saved to `localStorage` to allow the user to stay logged in.
+1. As a logged in user, I can create a new story.
+1. As a logged in user, I can "favorite" a story which saves it to my profile.
+1. As a logged in user, I can view my user profile which contains the fields I signed up with (except my password, which is hidden).
+1. As a logged in user, I can view stories that I posted and my favorites in my profile.
+1. As a logged in user, I can remove individual stories that I've created  from the list in my profile.
+1. As a logged in user, I can remove individual favorites from the list of favorites in my profile.
 
-* Implement infinite scroll! When you scroll to the bottom of the page, make an AJAX request to get more top stories from Hacker News.
-* Add links for new stories and best stories, not just top stories. These should also pull from the Hacker News API.
-* Come up with some other features you can build using what the Hacker News API makes available to you!
+### BONUS
 
-Here are examples of requests to send to the stories API:
+* As a user, I can edit stories that I've created
+* As a user, I can change my `name` and `password` in my profile.
+* As a user, I want infinite scroll! When I scroll to the bottom of the page, it loads more stories.
+* Come up with some other features you can build using what our Hack or Snooze API makes availalbe to you!
 
-__Stories API - POST /login__
 
-In order to use the stories api, you must first be authenticated.  Here is a sample request for authenticating with the server:
+### To get started with the API, check out the [Quickstart section](https://hackorsnoozeapi.docs.apiary.io/#introduction/quickstart) of the documentation.
 
-```
-curl -H "Content-Type: application/json" \
-     -X POST \
-     -d '{"email":"ravingrabbit75@gmail.com","password":"password1234"}' \
-     https://hn-favorites.herokuapp.com/login
-```
+---
 
-Sample http response body:
-
-```
-{"auth_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0Nzg1NTg5NzZ9.p-t2FDi3EndJWI892lijvaJoV3O7I9CMTHC6pKAcScw"}
-```
-
-The syntax for `/signup` is similar. As with `/login`, upon successful signup the server will respond with an auth token.
-
-__Stories API - GET /stories.json__
-
-The stories api allows creating and deleting of a favorite story.  To see all of the stories that have been favorited, make a GET request to:
-
-```
-https://hn-favorites.herokuapp.com/stories.json
-```
-
-Sample curl request:
-
-```
-curl -H "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0Nzg1NTg5NzZ9.p-t2FDi3EndJWI892lijvaJoV3O7I9CMTHC6pKAcScw" \
-     https://hn-favorites.herokuapp.com/stories.json
-```
-
-Expected results:
-
-```
-[
- {
-  "id":1,
-  "by":"DiabloD3",
-  "story_id":12804483,
-  "title":"Samsung Sets Its Reputation on Fire with Bogus DMCA Takedown Notices",
-  "url":"https://hn-favorites.herokuapp.com/stories/1.json",
-  "created_at":"2016-10-27T14:42:10.834Z",
-  "updated_at":"2016-10-27T14:42:10.834Z"
-  }
-]
-```
-
-__Stories API - POST /stories.json__
-
-To create a favorite story, make a POST request to:
-
-```
-https://hn-favorites.herokuapp.com/stories.json
-```
-
-Here is a potential curl request:
-
-```
-curl -H "Content-Type: application/json" \
-     -H "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0Nzg1NTg5NzZ9.p-t2FDi3EndJWI892lijvaJoV3O7I9CMTHC6pKAcScw" \
-     -X POST \
-     -d '{"hacker_news_story":{"by":"Ray","story_id":48382,"title":"How to be an Animator","url":"https://www.rithmschool.com"}}' \
-     https://hn-favorites.herokuapp.com/stories.json
-```
-
-__Stories API - DELETE /stories/:id.json__
-
-To delete a favorite story, you will need the id created by the api.  For example, a delete request might be to the following url:
-
-```
-https://hn-favorites.herokuapp.com/stories/2.json
-```
-
-Here is the curl command to delete:
-
-```
-curl -H "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE0Nzg1NTg5NzZ9.p-t2FDi3EndJWI892lijvaJoV3O7I9CMTHC6pKAcScw" \
-     -X DELETE \
-     https://hn-favorites.herokuapp.com/stories/2.json
-```
+### How Token Auth Works
+1. Make a request to receive a token (in our case at `/auth`).
+1. On subsequent requests you make, the token gets placed in a special request header called `Authorization`.
+1. The format is like so: `{ Authorization: 'Bearer ' + token }`, for example: `{ Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1odWV0ZXIiLCJpYXQiOjE1MTAyMDcwMDl9.5oUeihYn2AkqGy6z3g5F5B46gWWgvGKilFr9S4gg-p4'}`.
+1. The blob of characters is actually just a base64-encoded payload. You can decode it here: [https://www.base64decode.org/](https://www.base64decode.org/).
+1. The token is NOT encrypted, as you can see it's just base64-encoded. This means sensitive data should not travel with it (such as password).
+1. The purpose of the token is to let the API know who is making the request (i.e. authentication). The API has a secret/private key that it uses to generate and decode the tokens. It decodes and verifies the tokens on every request.
+1. The secret key is unique for every API, so the API will know one of its own tokens when it sees it.
+1. For more info check out [https://jwt.io](https://jwt.io).
