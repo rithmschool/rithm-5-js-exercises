@@ -9,8 +9,10 @@ productOfArray([0,1,2,3]) // 0
 productOfArray([1,-2,3]) // -6
 */
 
+
 function productOfArray(arr) {
   //create var result
+  if(arr.length === 0) return 0;
   var result = 1;
   //create helper hunction to get product
   function helper(array) {
