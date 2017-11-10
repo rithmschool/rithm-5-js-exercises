@@ -33,12 +33,28 @@ function contains(obj, val) {
   return false;
 }
 
-function contains(obj, val) {
+function contains(obj, val, bool = false) {
+
   for (var prop in obj) {
-    return obj[prop] === val ?
-      true :
-      typeof obj[prop] === 'object' ?
-      contains(obj[prop], val) :
-      false
+    if (obj[prop] === val) {
+      return true;
+    }
+    if (typeof (obj[prop]) === 'object') {
+      bool = contains(obj[prop], val, bool);
+    }
+  }
+  return bool;
+}
+
+function search(arr, num, count = 0) {
+ 
+  if (count === arr.length) {
+    return -1;
+  }
+  if (arr[count] === num) {
+    return count;
+  }
+  if (arr[count] !== num) {
+    return search(arr, num, (count = count + 1))
   }
 }
