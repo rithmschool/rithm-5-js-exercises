@@ -82,6 +82,18 @@ function contains(obj, value) {
   treeClimber(obj, value);
   return bool;
 }
+// PURE JS RECURSION SOLVED WITH SEAN
+// function contains(obj, val, bool = false){
+//   for(var prop in obj){
+//     if(obj[prop] === val){
+//       return true;
+//     }
+//     if(typeof (obj[prop]) === 'object'){
+//       bool = contains(obj[prop], val, bool);
+//     }
+//   }
+//   return bool;
+// }
 
 // contains(nestedObject, 44) // true
 // contains(nestedObject, "foo") // false
@@ -133,12 +145,44 @@ function replicate(times, number) {
 
 // - Write a function called search that finds a value in an array and returns the index where the value is at. If the value is not found, the function should return negative 1.
 
+function search(arr, num, count = 0) {
+  //Base case
+  if (count === arr.length) {
+    return -1;
+  }
+  //recursion case
+  if (arr[count] === num) {
+    return count;
+  }
+  if (arr[count] !== num) {
+    return search(arr, num, (count = count + 1));
+  }
+}
+
 // ```javascript
 // search([1,2,3,4,5],5) // 4
 // search([1,2,3,4,5],15) // -1
 // ```
 
 // - Refactor your search function to use a faster algorithm called binary search [https://www.youtube.com/watch?v=JQhciTuD3E8](https://www.youtube.com/watch?v=JQhciTuD3E8).
+
+function binarySearch(arr, val, low = 0, high = arr.length - 1) {
+  let mid = Math.ceil((low + high) / 2);
+
+  if (high < low) {
+    return -1;
+  }
+  if (arr[mid] > val) {
+    high = mid - 1;
+    return binarySearch(arr, val, low, high);
+  }
+  if (arr[mid] < val) {
+    low = mid + 1;
+    return binarySearch(arr, val, low, high);
+  } else {
+    return mid;
+  }
+}
 
 // ```javascript
 // binarySearch([1,2,3,4,5],5) // 4
@@ -148,31 +192,32 @@ function replicate(times, number) {
 // - Write a function called `stringifyNumbers` which takes in an object and finds all of the values which are numbers and converts them to strings. Recursion would be a great way to solve this!
 
 // ```javascript
-// var obj = {
-//     num: 1,
-//     test: [],
-//     data: {
-//         val: 4,
-//         info: {
-//             isRight: true,
-//             random: 66
-//         }
-//     }
-// }
-// stringifyNumbers()
-// /*/
-// {
-//     num: "1",
-//     test: [],
-//     data: {
-//         val: "4",
-//         info: {
-//             isRight: true,
-//             random: "66"
-//         }
-//     }
-// }
-// /*/
+
+var obj = {
+  num: 1,
+  test: [],
+  data: {
+    val: 4,
+    info: {
+      isRight: true,
+      random: 66
+    }
+  }
+};
+
+/*/
+{
+    num: "1",
+    test: [],
+    data: {
+        val: "4",
+        info: {
+            isRight: true,
+            random: "66"
+        }
+    }
+}
+/*/
 // ```
 
 // Complete [this](https://www.codewars.com/kata/mutual-recursion/train/javascript) codewars problem!
