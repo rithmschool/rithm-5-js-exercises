@@ -5,11 +5,11 @@
 
 ## Requirements
 
-The requirements below are listed as Agile/Scrum requirements that you might see on a software engineering kanban board or task list. Some of these tasks are phrased as "User Stories", which means they are written from the perspective of a user/customer.
+The requirements below are listed as Agile/Scrum requirements that you might see on a software engineering kanban board or task list. The tasks are phrased as "User Stories", which means they are written from the perspective of a user/customer.
 
 1. As a user, I can see at least 10 latest stories on the homepage which link to the actual stories.
 1. As a user, I can login or signup for an account on the homepage.
-1. (Technical) When the user logs in successfully, the server responds with a JSON Web Token (JWT) that is required for other requests. The token should be saved to `localStorage` to allow the user to stay logged in.
+1. As a user, I can stay logged in for some time. _Technical: When the user logs in successfully, the server responds with a JSON Web Token (JWT) that is required for other requests. The token should be saved to `localStorage` to allow the user to stay logged in._
 1. As a logged in user, I can create a new story.
 1. As a logged in user, I can "favorite" a story which saves it to my profile.
 1. As a logged in user, I can view my user profile which contains the fields I signed up with (except my password, which is hidden).
