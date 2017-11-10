@@ -23,6 +23,8 @@ function contains(obj, val){
 		for(var key in obj){
 			if(contains(obj[key],val)){
 				return true;
+			} else {
+				contains(obj[key], val);
 			}
 		}
 		return false;
