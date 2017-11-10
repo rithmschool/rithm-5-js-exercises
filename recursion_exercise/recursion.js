@@ -107,38 +107,38 @@ function search(arr, num){
 }
 
 
-function binarySearch(arr, num){
+// function binarySearch(arr, num){
 
-	var tracker = arr.length - 1
+// 	var tracker = arr.length - 1
 
-	function helper(arr, num){
-		tracker = Math.ceiling((arr.length - 1)/2)
-		var middle = arr[tracker]
+// 	function helper(arr, num){
+// 		tracker = Math.ceiling((arr.length - 1)/2)
+// 		var middle = arr[tracker]
 
-		if(arr.length === 1){
-			if(arr[0] !=== num){
-				return -1
-			} return true
-		}
+// 		if(arr.length === 1){
+// 			if(arr[0] !=== num){
+// 				return -1
+// 			} return true
+// 		}
 
-		if(middle === num){
-			return tracker
-		} else {
-			if(middle > num){
-				helper(arr.slice(0, tracker), num)
-			} else {
-				helper(arr.slice(tracker + 1, arr.length)
-			}
-		}
-	}
+// 		if(middle === num){
+// 			return tracker
+// 		} else {
+// 			if(middle > num){
+// 				helper(arr.slice(0, tracker), num)
+// 			} else {
+// 				helper(arr.slice(tracker + 1, arr.length)
+// 			}
+// 		}
+// 	}
 
-	helper(arr, num)
+// 	helper(arr, num)
 
-    if(tracker === len){
-        return -1
-    }
-    return tracker
-}
+//     if(tracker === len){
+//         return -1
+//     }
+//     return tracker
+// }
 
 
 function stringifyNumbers(obj){
