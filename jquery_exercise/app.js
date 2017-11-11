@@ -1,18 +1,20 @@
 $(function() {
 	//set up counters
-	let favCounter = 1;
-	let submitCounter = 1;
+	let favClickCounter = 1;
+	let submitClickCounter = 1;
+	let sortedClickCounter = 1;
+	let numFavs = 0;
 
 	//How to show submit form
 	$("#submitClick").on("click", function(e) {
 		e.preventDefault();
 		$formDiv = $("form").parent();
-		if (submitCounter % 2) {
+		if (submitClickCounter % 2) {
 			$formDiv.css("display", "block");
 		} else {
 			$formDiv.css("display", "none");
 		}
-		submitCounter++;
+		submitClickCounter++;
 	});
 	//How to submit a new story
 	$("#submitNewStory").on("submit", function(e) {
@@ -22,12 +24,13 @@ $(function() {
 		var titleVal = $title.val();
 		var siteVal = $site.val();
 		if (
+			titleVal.match(/.+/) === null ||
 			siteVal.match(
-				/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/
+				/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi
 			) === null
 		) {
 			alert(
-				"Invalid website, please re-enter correctly (include the 'www' please!)"
+				"Invalid: please make sure you entered a title and included the 'www' in a valid website. Thank you!"
 			);
 			return;
 		}
@@ -36,17 +39,25 @@ $(function() {
 		var $id = $("#stories li:last-child");
 		var newId = Number($id.attr("id")) + 1;
 		$("#stories").append(`
-<li id=${newId} class="list-group-item text-secondary bg-light">${newId}. <i class="fa fa-star-o" aria-hidden=true></i> <span class=text-dark> ${titleVal} </span> (${siteVal})</li>`);
+<li id=${newId} class="list-group-item text-secondary bg-light">${newId}. <i class="fa fa-star-o" aria-hidden=true></i> <span class=text-dark> ${titleVal} </span> <span class="toSort">(${siteVal})</span></li>`);
 	});
 
 	//How to favorite a story
-	$("#stories").on("click", "li", function(e) {
+	$("#stories").on("click", "i", function(e) {
 		e.preventDefault();
-		var $li = $(this);
-		var $icon = $li.find("i");
+		var $icon = $(this);
 		var currStar = $icon.attr("class");
-		if (currStar === "fa fa-star") $icon.attr("class", "fa fa-star-o");
-		else $icon.attr("class", "fa fa-star");
+		var $numFavs = $("#numFavs");
+
+		if (currStar === "fa fa-star") {
+			$icon.attr("class", "fa fa-star-o");
+			numFavs--;
+			$numFavs.text(numFavs);
+		} else {
+			$icon.attr("class", "fa fa-star");
+			numFavs++;
+			$numFavs.text(numFavs);
+		}
 	});
 
 	//How to show favorite news
@@ -58,11 +69,40 @@ $(function() {
 				var $star = $(el).find("i");
 				return $star.attr("class") === "fa fa-star-o";
 			});
-		if (favCounter % 2) {
+		var $numFavs = $("#numFavs");
+		if (favClickCounter % 2) {
 			$lis.css("display", "none");
+			$numFavs.html("<small>Show All</small>");
 		} else {
 			$lis.css("display", "block");
+			$numFavs.html(numFavs);
 		}
-		favCounter++;
+		favClickCounter++;
+	});
+
+	//How to sort by url
+	$("#stories").on("click", ".toSort", function(e) {
+		e.preventDefault();
+		var $toSort = $(this);
+		if (sortedClickCounter % 2) {
+			var $sortedLis = $("#stories li").filter(function(i, el) {
+				return (
+					$(el)
+						.find(".toSort")
+						.text() !== $toSort.text()
+				);
+			});
+			$sortedLis.each(function(i, el) {
+				$(el).css("display", "none");
+			});
+		} else {
+			var $sortedLis = $("#stories li").filter(function(i, el) {
+				return $(el).css("display") === "none";
+			});
+			$sortedLis.each(function(i, el) {
+				$(el).css("display", "block");
+			});
+		}
+		sortedClickCounter++;
 	});
 });
