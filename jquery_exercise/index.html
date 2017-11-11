@@ -9,6 +9,7 @@
 </head>
 <body>
 	<div class="container">
+		<!-- Nav bar -->
 		<nav class="navbar navbar-expand-sm navbar-light" style="background-color: darkorange">
 			<a class="navbar-brand" href="#"> Hack or Snooze</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,42 +18,39 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav mr-auto">
 					<li class="navbar-item">
-						<a class="nav-link" href="#">submit</a>
-					</li>
-					<small> | </small>
-					<li>
+						<a id="submitClick" class="nav-link" href="#">submit</a>
 					</li>
 					<li class="navbar-item">
-						<a class="nav-link" href="#">favorites</a>
+						<a id ="favoritesClick" class="nav-link" href="#">favorites</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
-		<form style="display: none" class="p-3 bg-secondary d-flex flex-column">
-			<div class="form-group">
-				<label for="title">Title:</label>
-				<input type="text" class="form control text-dark" style="width: 100%" id="title" aria-describedby="title" name="storyTitle" placeholder="Enter your title here...">
-			</div>
-			<div class="form-group">
-				<label for="site">Website:</label>
-				<input type="text" class="form control text-dark" style="width: 100%" id="site" aria-describedby="website" name="storyWebsite" placeholder="Which website..."">
-			</div>
-			<div class="form-group">
-				<label for="storyText">Text:</label>
-				<textarea class="form control" style="width: 100%" id="storyText" aria-describedby="text area" name="storyText" rows="5"> Enter your story here...</textarea>
-			</div>
-			<button type="submit" class="align-self-center" btn-sm bg-light" style="width: 33%; background-color: darkorange">Submit</button>
-		</form>
-		
-	</section>
-	<main>
-		<ul id="stories" class="list-group">
-			<li id="1" class="list-group-item text-secondary bg-light">1. <i class="fa fa-star-o" aria-hidden="true"></i> <span class="text-dark"> test </span> (rithmschool.com)</li>
-		</ul>
-	</main>
-</div>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="app.js"></script>
+
+		<!-- Submit form section -->
+		<div style="display: none">
+			<form id="submitNewStory" style="display: none" class="p-3 bg-secondary d-flex flex-column">
+				<div class="form-group">
+					<label for="title">Title:</label>
+					<input type="text" class="form control text-dark" style="width: 100%" id="title" aria-describedby="title" name="storyTitle" placeholder="Enter your title here...">
+				</div>
+				<div class="form-group">
+					<label for="site">Website:</label>
+					<input type="text" class="form control text-dark" style="width: 100%" id="site" aria-describedby="website" name="storyWebsite" placeholder="Which website..."">
+				</div>
+				<button type="submit" class="align-self-center btn-dark" style="width: 33%;">Submit</button>
+			</form>
+		</div>
+		<!-- Stories section -->
+		<main>
+			<ul id="stories" class="list-group">
+				<li id="1" class="list-group-item text-secondary bg-light">1. <i class="fa fa-star-o" aria-hidden="true"></i> <span class="text-dark"> We made it through Week 1! </span> (www.rithmschool.com)</li>
+			</ul>
+		</main>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="app.js"></script>
 </body>
 </html>
