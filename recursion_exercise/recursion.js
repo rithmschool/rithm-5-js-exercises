@@ -205,6 +205,20 @@ var obj = {
   }
 };
 
+function stringifyNumbers(obj) {
+  let strNumObj = {};
+  for (let key in obj) {
+    if (typeof obj[key] === "object" && !Array.isArray(obj[key])) {
+      strNumObj[key] = stringifyNumbers(obj[key]);
+    } else if (typeof obj[key] === "number") {
+      strNumObj[key] = "" + obj[key];
+    } else {
+      strNumObj[key] = obj[key];
+    }
+  }
+  return strNumObj;
+}
+
 /*/
 {
     num: "1",
@@ -221,3 +235,19 @@ var obj = {
 // ```
 
 // Complete [this](https://www.codewars.com/kata/mutual-recursion/train/javascript) codewars problem!
+
+function F(n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    return n - M(F(n - 1));
+  }
+}
+
+function M(n) {
+  if (n === 0) {
+    return 0;
+  } else {
+    return n - F(M(n - 1));
+  }
+}
