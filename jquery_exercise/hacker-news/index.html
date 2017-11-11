@@ -9,6 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
     crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/278c1fd9cb.js"></script>
+    <script src="js/hacker.js"></script>
     <link rel="stylesheet" href="css/style.css">
   <title>Hack or Snooze</title>
 </head>
@@ -17,9 +18,9 @@
     <header>
       <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">Hack or Snooze</a>
-        <ul class="nav ">
+        <ul class="nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Submit</a>
+            <a class="nav-link active" href="#" class="form">Submit</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Favorites</a>
@@ -29,23 +30,22 @@
     </header>
 
     <section class="content">
-
-      <div class="row justify-content-md-center">
-        <div class="col-md-6">
+      <div class="row justify-content-md-center form">
+        <div class="col-md-6 my-4">
           <form>
-            <div class="form-group">
-              <label for="title">Title</label>
-              <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter Article Title">
+            <div class="form-group row">
+              <label for="title" class="col-form-label col-sm-1">Title</label>
+              <div class="col-sm-11">
+                <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter Article Title">
+              </div>
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Article URL</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <div class="form-group row">
+              <label for="url" class="col-form-label col-sm-1">URL</label>
+              <div class="col-sm-11">
+                <input type="password" class="form-control" id="url" placeholder="Enter the URL">
+              </div>
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input type="checkbox" class="form-check-input"> Check me out
-              </label>
-            </div>
+            
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
