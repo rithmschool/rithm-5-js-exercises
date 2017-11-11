@@ -1,0 +1,120 @@
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
+
+body {
+  font: normal normal 13px/14px "Open Sans", sans-serif;
+  background: #dfdfdf;
+}
+
+.container {
+  padding: 20px;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
+  background: white;
+  border-radius: 5px;
+}
+
+#banner {
+  background: #D6654D;
+  padding: 10px;
+}
+
+#form {
+  display: none; 
+}
+#button2 {
+  display:block;
+  margin-top: 15px;
+}
+
+input {
+  padding: 4px 15px 4px 5px;
+}
+
+#s {
+  display: inline-block;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 2px;
+  padding: 5px 15px; 
+}
+
+#s:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+ol li {
+  padding: 5px;
+  color: #000;
+}
+
+ol li:nth-child(even) {
+  background: #dfdfdf;
+}
+
+li:hover {
+  cursor: pointer;
+}*/
+
+#wrapper{
+  background: #dfdfdf;
+}
+
+header {
+  background: #D6654D;
+  border-radius: 5px;
+
+
+}
+
+h2 {
+  display: inline-flex;
+  padding-left: 15px;
+}
+
+.nav {
+  display: inline-flex;
+  padding-left: 40px;
+}
+
+.formInput {
+  margin: 10px 0 0 30px;
+}
+
+button {
+  border-radius: 5px;
+  background: grey;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
