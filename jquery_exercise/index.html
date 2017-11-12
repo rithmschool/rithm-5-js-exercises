@@ -7,20 +7,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-danger">
   <a class="navbar-brand" href="#">Hack or Snooze</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="collapse navbar-collapse navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" id="submit" href="#">Submit</a>
-      <a class="nav-item divider">|</a>
-      <a class="nav-item nav-link" href="#">Favorites</a>
-    </div>
+      <a class="nav-item nav-link navbarNavAltMarkup" id="submit" href="#">Submit</a>
+      <span class="divider">|</span>
+      <a class="nav-item nav-link navbarNavAltMarkup" id="favoriteList" href="#">Favorites</a>
   </div>
 </nav>
 
@@ -50,13 +51,16 @@
 <div class="container" id="list">
 	<div class="row">
 		<ol class="urlLinks">
-			<li><span class="fa fa-star-o"></span> First item placeholder</li>
-			<li><span class="fa fa-star-o"></span> Second item placeholder</li>
-			<li><span class="fa fa-star-o"></span> Third item placeholder</li>
-			<li><span class="fa fa-star-o"></span> First item placeholder</li>
-			<li><span class="fa fa-star-o"></span> First item placeholder</li>
-			<li><span class="fa fa-star-o"></span> First item placeholder</li>
+			<li><a href='#' style="text-decoration: none;" class="fa fa-pied-piper"></a><b> First item</b> <span>(testplace.com)</span></li>
+			<li><a href='#' class="fa fa-pied-piper"></a> <b>Second item </b> <span>(testplace.com)</span></li>
+			<li><a href='#' class="fa fa-pied-piper"></a> <b>Third item </b> <span>(testplace.com)</span></li>
+			<li><a href='#' class="fa fa-pied-piper"></a> <b>First item </b> <span>(testplace.com)</span></li>
+			<li><a href='#' class="fa fa-pied-piper"></a> <b>First item </b> <span>(testplace.com)</span></li>
+			<li><a href='#' class="fa fa-pied-piper"></a> <b>First item </b> <span>(testplace.com)</span></li>
 		</ol>
+		<div>
+			<p class="fa fa-pied-piper-pp"> = Favorite</p>
+		</div>
 	</div>
 </div>
 
