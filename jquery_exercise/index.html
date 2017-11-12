@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>HackOrSnooze</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	</head>
+</head>
+<body>
+	<div class="container">
+		<!-- Nav bar -->
+		<nav class="navbar navbar-expand-sm navbar-light" style="background-color: darkorange">
+			<a class="navbar-brand" href="#"> Hack or Snooze</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mr-auto">
+					<li class="navbar-item">
+						<a id="submitClick" class="nav-link" href="#">submit</a>
+					</li>
+					<li class="navbar-item">
+						<a id ="favoritesClick" class="nav-link" href="#">favorites<span id="pillNumFavs" class="badge-pill badge-secondary m-1">0</span></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Submit form section -->
+		<div style="display: none">
+			<form id="submitNewStory" style="display: none" class="p-3 bg-secondary d-flex flex-column">
+				<div class="form-group">
+					<label for="title">Title:</label>
+					<input type="text" class="form control text-dark" style="width: 100%" id="title" aria-describedby="title" name="storyTitle" placeholder="Enter your title here...">
+				</div>
+				<div class="form-group">
+					<label for="site">Website:</label>
+					<input type="text" class="form control text-dark" style="width: 100%" id="site" aria-describedby="website" name="storyWebsite" placeholder="Which website..."">
+				</div>
+				<button type="submit" class="align-self-center btn-dark" style="width: 33%;">Submit</button>
+			</form>
+		</div>
+		<!-- Stories section -->
+		<main>
+			<ul id="stories" class="list-group">
+				<li id="1" class="list-group-item text-secondary bg-light">1. <i class="fa fa-star-o" aria-hidden="true"></i> <span class="text-dark"> We made it through Week 1! </span><span class="toSort">(www.rithmschool.com)</span></li>
+			</ul>
+		</main>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="app.js"></script>
+</body>
+</html>
