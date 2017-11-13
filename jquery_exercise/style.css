@@ -1,0 +1,40 @@
+.divider {
+	margin-top: 7px;
+}
+
+#form {
+	margin-top: 30px;
+}
+
+#list {
+	margin-top: 50px;
+}
+
+
+
+ol.urlLinks li a {
+    color: gray;
+    text-decoration: none;
+}
+
+
+ol > li {
+	color: gray;
+}
+
+ol > li > b {
+	color: black;
+}
+
+ol > li > span {
+	font-size: small;
+}
+
+body {
+	background-color: beige !important;
+}
+
+
+.navbar {
+	background-color: purple !important;
+}
