@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-danger">
+  <a class="navbar-brand" href="#">Hack or Snooze</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" id="submit" href="#">Submit</a>
+      <a class="nav-item divider">|</a>
+      <a class="nav-item nav-link" id = "favorites" href="#">Favorites</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+	<form id="form">
+	  <div class="form-group row">
+	    <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>
+	    <div class="col-sm-7">
+	      <input type="text" class="form-control urlTitle" id="inputTitle" placeholder="Title" required>
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="inputPassword" class="col-sm-2 col-form-label">URL</label>
+	    <div class="col-sm-7">
+	      <input type="url" class="form-control" id="inputTitle" placeholder="URL" required>
+	    </div>
+	  </div>
+	  <div class="row">
+	  	<div class="col-sm-2"></div>
+	  	<div class="col-sm-7">
+	  		<button type="submit" class="btn btn-secondary">Submit</button>
+	  	</div>
+	  </div>
+	</form>
+</div>
+
+<div class="container" id="list">
+	<div class="row">
+		<ol class="urlLinks">
+			<li><span class="fa fa-star-o"></span> <b>Looking up information</b><span class="link"> (google.com)</span></li>
+			<li><span class="fa fa-star-o"></span> <b>Watching cool videos</b><span class="link"> (youtube.com)</span></li>
+			<li><span class="fa fa-star-o"></span> <b>Staying in touch with friends</b><span class="link"> (facebook.com)</span></li>
+			<li><span class="fa fa-star-o"></span> <b>Shopping online</b><span class="link"> (amazon.com)</span></li>
+		</ol>
+	</div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
