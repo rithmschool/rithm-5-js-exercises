@@ -1,0 +1,66 @@
+body {
+	background-color: #ffffff;
+}
+
+.favall {
+	/*should toggle between fav or all*/
+}
+
+.navbar {
+	background-color: #ff6600;
+	justify-content: start;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.form {
+	background-color: #f6f6ef;
+}
+
+#submitform {
+}
+
+.list-group-item {
+	border: none;
+	background-color: #f6f6ef;
+	display: list-item;
+	padding: 3px;
+	width: 400px;
+}
+
+.hostname {
+}
+
+.list-group {
+}
+
+a {
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: lightgrey;
+}
+
+.text-muted {
+	color: lightgrey;
+}
+
+.articles {
+	background-color: #f6f6ef;
+	padding-left: 50px;
+}
+.button {
+	margin-left: 5px;
+}
+
+.fa .fa-star-o {
+}
+
+.fa .fa-star {
+}
+
+small > a {
+	color: #868e96;
+}
