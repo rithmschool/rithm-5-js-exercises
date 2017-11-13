@@ -108,8 +108,19 @@ button {
   border: none;
 }
 
+#title {
+  width: 240px;
+  height: 25px;
+}
+
+#urlLink {
+  width: 240px;
+  height: 25px;
+}
+
 #form {
   display: none;
+  font-style: bold;
 }
 
 ol {
