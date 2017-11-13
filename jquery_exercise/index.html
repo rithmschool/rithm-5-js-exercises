@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="flatly.css">
+  <script src="https://use.fontawesome.com/6b91cd47e2.js"></script>
+
+</head>
+<body>
+
+<!--Nav Bar -->
+	<nav class="navbar navbar-expand navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Hack or Snooze</a>
+  <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        submit</a>
+       
+       <!--submit menu-->
+        <div class="dropdown-menu dropdown-menu-right bg-light p-3 mt-3" aria-labelledby="navbarDropdown">
+        	<form class="submitItem" id="needs-validation" noValidate>
+        		<div class="form-inline">
+        		  <label for="title">title</label>
+      			   <input class="form-control" type="title" id="title" placeholder="title" aria-label="title" required>
+      			</div>
+
+            <div class="form-inline">
+      			<label for="url">url</label>
+      			<input class="form-control" type="url" id="url" placeholder="url" aria-label="url" required>
+            </div>
+            <div class="invalid-feedback">
+                Please provide a valid URL.
+            </div>
+
+      			<div class="dropdown-divider"></div>
+      			<button id="submit" class="btn btn-secondary" type="submit">submit</button>
+    		</form>
+      	</div>
+      </div>      
+      	
+          <a class="nav-link text-light" href="#" id="toggleFeed" >favorites</a>
+         
+  </div>
+</nav>
+
+<!--content-->
+<div>
+  <ol class="list-group" style="list-style: decimal inside;">
+    <li class="list-group-item" style="display: list-item">
+      <i class="fa fa-star-o" aria-hidden="true"></i>
+      <a href="#" class="px-3 text-dark" style="text-decoration: none">Big news</a>
+      <a class="text-muted small">(domain name)</a>
+    </li>
+  </ol>
+</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="hackSnooze.js"></script>
+
+</body>
+</html>
