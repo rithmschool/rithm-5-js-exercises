@@ -5,7 +5,7 @@ body {
   background: #dfdfdf;
 }
 
-.container {
+.container {  
   padding: 20px;
   width: 600px;
   margin: 0 auto;
@@ -61,31 +61,40 @@ ol li:nth-child(even) {
 li:hover {
   cursor: pointer;
 }*/
-#wrapper{
-  padding: 20px;
-  width: 600px;
+
+#wrapper {
+  font-family: sans-serif;
+  padding-bottom: 10px;
+  width: 720px;
   margin: 0 auto;
   margin-top: 40px;
   border-radius: 5px;
-  background: #dfdfdf ;
-
+  background: #f5f5ee;
 }
 
 header {
-  background: #D6654D ;
+  background: #ff6338;
   border-radius: 5px;
-
-
 }
 
 h2 {
   display: inline-flex;
   padding-left: 15px;
+  margin: 15px;
 }
 
 .nav {
   display: inline-flex;
-  padding-left: 40px;
+  padding-left: 25px;
+  font-size: 1.2em;
+}
+
+.empty-star {
+  color: #a6a299;
+}
+
+.full-star {
+  color: #a6a299;
 }
 
 .formInput {
@@ -93,19 +102,65 @@ h2 {
 }
 
 button {
+  padding: 10px;
   border-radius: 5px;
-  background:   grey;
-  color: black;
+  margin-left: 80px;
+  background: #c0bdb5;
+  color: white;
+  border: none;
+  font-size: 0.8em;
+}
+
+#title {
+  width: 300px;
+  height: 35px;
+}
+
+#urlLink {
+  width: 300px;
+  height: 35px;
 }
 
 #form {
-  display: none; 
+  display: none;
+  padding: 12px 0 24px 50px;
+  font-size: 1.2em;
+  font-weight: 600;
+
 }
 
+span.url {
+    margin-left: 3px;
+}
 
+input {
+  margin: 3px 0 3px 47px;
+  font-size: 0.9em;
+  padding-left: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #d8d6d0;
+  border-width: thin;
+}
 
+ol {
+  color: #a6a299;
+}
 
+a {
+  color: black;
+}
 
+li {
+  margin-bottom: 15px;
+  margin-left: 15px;
 
+}
 
+.hidden {
+  display: none;
+}
 
+span.hostDomain {
+  margin-left: 10px;
+}
