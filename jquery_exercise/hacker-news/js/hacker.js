@@ -13,4 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     $(".article_list").append('<li id=' + $titleVal + '><i class="fa fa-star-o" aria-hidden=true></i><span class="font-weight-bold"> ' + $titleVal + '</span> <span class="toSort"><small>' + $siteVal + '</small></span></li>');
   });
+
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
 })
