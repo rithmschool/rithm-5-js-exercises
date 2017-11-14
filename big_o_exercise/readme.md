@@ -13,7 +13,7 @@ Simplify the following big O expressions as much as possible:
 7. `O(1000 * n * log(n) + n)` O(n log n)
 8. `O(2^n + n^2)` O(2^n)
 9. `O(5 + 3 + 1)` O(1)
-10. `O(n + n^(1/2) + n^2 + n * log(n)^10)` O(n log n)
+10. `O(n + n^(1/2) + n^2 + n * log(n)^10)` O(n^2)
 
 ### Part 2
 
@@ -66,7 +66,7 @@ function onlyElementsAtEvenIndex(array) {
     return newArray;
 }
 
-Time Complexity: O(n^2)
+Time Complexity: O(n)
 Space Complexity: O(n)
 
 // 5. 
@@ -83,6 +83,6 @@ function subtotals(array) {
     return subtotalArray;
 }
 
-Time Complexity: O(2^n)
+Time Complexity: O(n^2)
 Space Complexity: O(n)
 ```
