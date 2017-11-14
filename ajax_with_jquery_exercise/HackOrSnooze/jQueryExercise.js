@@ -127,6 +127,9 @@ $(document).ready(function() {
   //   $("#favoritesLink").toggleClass("hidden");
   // });
 
+  $.getJSON('https://hack-or-snooze.herokuapp.com/stories').then(function (response) {
+    console.log(response);
+  })
 });
 
 
