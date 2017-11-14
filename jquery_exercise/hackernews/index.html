@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  <script src="https://use.fontawesome.com/278c1fd9cb.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
     <title>Hack OR Snooze</title>
   </head>
   <body>
     <div class="container">
     <!-- Content here -->
       <header>
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-light">
         <a class="navbar-brand" href="#">Hack or Snooze</a>
 
         <ul class="nav mr-auto">
 
           <li class="nav-item">
-            <a class="nav-link active" href="#">submit</a>
+            <a class="nav-link submit" href="#">submit</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">favorites</a>
+            <a class="nav-link favorites" href="#">favorites</a>
         </ul>
         </nav>
       </header>
@@ -31,7 +32,7 @@
       <section class="content">
         <div class="row">
           <div class="col-md-8">
-            <form>
+            <form id="storyForm">
               <div class="form-group">
                 <label for="exampleInputEmail1">Title</label>
                 <input type="Title" class="form-control" id="Title" aria-describedby="emailHelp" placeholder="Article Title">
@@ -39,7 +40,7 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Article URL</label>
-                <input type="Article Link" class="form-control" id="exampleInputLink1" placeholder="Article Link">
+                <input type="Article Link" class="form-control" id="URL" placeholder="Article Link">
               </div>
 
               <button type="submit" class="btn btn-primary">Submit</button>
@@ -50,17 +51,27 @@
         </div>
         <div class="row">
           <article class="col-md-12">
-            <p>1.</p>
+
             <i class="fa fa-newspaper-o" aria-hidden="true"></i>
             <h1>This is the article title</h1>
             <a href="#">This is a link to the article</a>
           </article>
+
+
         </div>
       </section>
+      <ul id="storyList">
+
+      </ul>
 
       <footer>
           <p> This is the footer section </p>
       </footer>
     </div>
+
   </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/278c1fd9cb.js"></script>
+  <script src="js/hacker.js"></script>
   </html>
