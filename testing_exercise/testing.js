@@ -26,5 +26,29 @@ function acceptNumbersOnly(){
   //accepts multiple arguments
   //returns boolean if (typeof. "number")
   //NaN === typeof.of "number"
+  for(var i = 0; i < arguments.length; i++){
+    if (Number.isNaN(arguments[i]) || typeof(arguments[i]) !== "number"){
+      return false;
+    }
+
+  }
+  return true;
+}
+
+function mergeArrays(arr1, arr2){
+  //input: two mergeArrays
+  //returns: one merged array with values .sort
+  return arr1.concat(arr2).sort();
+
+}
+
+function mergeObjects(obj1, obj2){
+  //input: two objects
+  //returns an obj with keys and values combined
+  //if obj2 has the same key as obj1, then reassign obj1 with obj2
+  for(var key in obj2){
+    obj1[key] = obj2[key];
+    }
+   return obj1;
 
 }
