@@ -2,6 +2,21 @@
   background-color: rgb(244, 244, 234);
 }
 
-.display{
+nav.navbar {
+  background-color: #ff6a00;
+}
+a:link{
+  color: #292929;
+}
+a:hover {
+  color: #363636;
+}
+a:visited {
+  color: #111111;
+}
+footer {
+  border-top: 2px solid #ff6a00;
+}
+.visible{
   display: none;
 }
