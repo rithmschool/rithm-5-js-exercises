@@ -5,13 +5,15 @@ header {
 
 #storyList {
   list-style: none;
+
 }
 
 .content{
-  display: none;
+  /*display: none;*/
 }
 
 #logInForm {
+  display: none;
   padding: 12px 0 24px 50px;
   font-size: 1.2em;
   font-weight: 600;

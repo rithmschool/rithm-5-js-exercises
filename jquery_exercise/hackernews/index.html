@@ -19,10 +19,14 @@
         <ul class="nav mr-auto">
 
           <li class="nav-item">
-            <a class="nav-link submit" href="#">submit</a>
+            <a class="nav-link submit" id="storySubmit" href="#">submit</a>
           </li>
           <li class="nav-item">
             <a class="nav-link favorites" href="#">favorites</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link login" href="#">log in</a>
+          </li>
         </ul>
         </nav>
       </header>
@@ -32,7 +36,7 @@
         <div class="row">
           <div class="col-md-8">
 
-            <form id="storyForm">
+            <div id="storyForm">
               <div class="form-group">
                 <label for="exampleInputEmail1">Title</label>
                 <input type="Title" class="form-control" id="Title" aria-describedby="emailHelp" placeholder="Article Title">
@@ -44,21 +48,12 @@
               </div>
 
               <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            </div>
 
           </div>
 
         </div>
         <div class="row">
-
-
-
-        </div>
-        <ul id="storyList">
-
-        </ul>
-
-
 
       </section>
 
@@ -79,12 +74,19 @@
               </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
 
-
-
-
             </form>
         </div>
       </div>
+
+      <ul id="storyList">
+
+      </ul>
+
+    </div>
+
+
+
+
 
 
 
