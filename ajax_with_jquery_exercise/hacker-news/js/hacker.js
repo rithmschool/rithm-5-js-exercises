@@ -10,7 +10,7 @@ $(document).ready(function () {
       let story_title = response.data[i].title;
       let story_author = response.data[i].author;
       let story_url = response.data[i].url;
-      $(".article_list").append(`<li id=${story_title} class="my-2"><i class="fa fa-star-o" aria-hidden=true></i><h6 class="font-weight-bold d-inline-block ml-1"><a href="${story_url}" target="_blank">${story_title}</a></h6> <p class="toSort d-inline-block"><small> - ${story_author} </small></p></li>`);
+      $(".article_list").append(`<li id=${story_title} class="my-2"><i class="fa fa-star-o" aria-hidden=true></i><h6 class="font-weight-bold d-inline-block ml-1"><a href="${story_url}" target="_blank">${story_title}</a></h6> <p class="toSort d-inline-block"><small> - ${story_author})</small></p></li>`);
     
     }
   })
