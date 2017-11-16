@@ -2,19 +2,44 @@
 $(document).ready(function(){
   $("#storyForm").submit(function(e) {
     e.preventDefault();
+    var $storyTitle = $("#Title").val();
+    var $storyURL = $("#URL").val();
+    var $username = localStorage.getItem('userName');
+    var $author = $("#author").val();
+
+    $.ajax({
+      method: "POST",
+      url:"https://hack-or-snooze.herokuapp.com/stories?skip=0&limit=10",
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem('token')
+      },
+      data:  {
+        data: {
+          username: $username,
+          title: $storyTitle,
+          author: $author,
+          url: $storyUrl
+
+        }
+      }
+      
+      .done(function(data){
+        console.log(data);
+      })
+    });
+
+
       $('#storyForm').slideUp();
       var addTitle = $("#Title").val();
       var addURL = $("#URL").val();
         $("#storyList").append("<li><i class='fa fa-newspaper-o' aria-hidden='true'></i>" + " " + addTitle + "</li>");
   });
 
-  $(".nav-link.submit").click(function(e) {
-    $("#storyForm").slideDown();
-  });
 
   $(".nav-link.login").click(function(e) {
     $("#storyList").hide();
     $("#logInForm").slideDown();
+    $("#storyForm").hide();
   });
 
 
@@ -72,16 +97,16 @@ $(document).ready(function(){
          $("#logInForm").hide();
          $("#storyList").slideDown();
 
-         $("#storySubmit").click(function(e){
+         $("#navStorySubmit").click(function(e){
            $("#storyForm").show();
+           $("#loginForm").hide();
          });
 
-
+        $("#storyForm").hide();
 
       });
 
 
-    $("#storyForm").hide();
 
 
 
