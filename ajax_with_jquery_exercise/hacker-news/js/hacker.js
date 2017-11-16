@@ -11,7 +11,8 @@ $(document).ready(function () {
       let story_title = response.data[i].title;
       let story_author = response.data[i].author;
       let story_url = response.data[i].url;
-      $(".article_list").append(`<li id=${story_title} class="my-2"><i class="fa fa-star-o" aria-hidden=true id="test"></i><h6 class="font-weight-bold d-inline-block ml-1"><a href="${story_url}" target="_blank">${story_title}</a></h6> <p class="toSort d-inline-block"><small> - ${story_author}</small></p></li>`);
+      let storyID = response.data[i].storyId;
+      $(".article_list").append(`<li id=${story_title} class="my-2" data-bob=${storyID}><i class="fa fa-star-o" aria-hidden=true id="test"></i><h6 class="font-weight-bold d-inline-block ml-1"><a href="${story_url}" target="_blank">${story_title}</a></h6> <p class="toSort d-inline-block"><small> - ${story_author}</small></p></li>`);
     
     }
   })
@@ -19,8 +20,27 @@ $(document).ready(function () {
   //clicking on an empty star next to a story marks it as a "favorite." 
   $("ol.article_list").on("click", "li i", function () {
     $(this).toggleClass("fa-star-o fa-star");
+    let storyid = $(this).parent().data("bob");
+    let username = localStorage.getItem('username')
+    console.log(test);
+     $.ajax({
+       url: `https://hack-or-snooze.herokuapp.com/users/${username}/favorites/${storyid}`,
+       method: "POST",
+       headers: {
+         Authorization: "Bearer " + localStorage.getItem('token')
+       },
+      data: {
+         data: {
+           username: localStorage.getItem('username'),
+           storyId: `${storyid}`
+         }
+       }
+       })
+
     });
   
+
+
   // Check if have a token and able to logged someone in
   $.ajax({
     url: 'https://hack-or-snooze.herokuapp.com/users/mangosing',
@@ -36,9 +56,11 @@ $(document).ready(function () {
 
 
 
-  $(".show_link").on('click', function(e){
-    $("form").toggleClass('visible');
-  })
+  // $(".show_link").on('click', function(e){
+  //   $("form").toggleClass('visible');
+  // })
+
+
   $(".submit_btn").on('click', function (e) {
     e.preventDefault();
     let titleVal = $('#title').val();
@@ -52,6 +74,8 @@ $(document).ready(function () {
     let fullName = $("#fullname_signup").val();
     let userName = $("#username_signup").val();
     let password_sign = $("#password_signup").val();
+
+    localStorage.setItem("username", `${userName}`);
 
     $.ajax({
       url: 'https://hack-or-snooze.herokuapp.com/users',
@@ -86,6 +110,10 @@ $(document).ready(function () {
   })
 
   $(".submit_story_btn").on('click',function(e) {
+    let articleTitle = $("#title").val();
+    let articleAuthor = $("#author").val();
+    let articleURL = $("#url").val();
+
     $.ajax({
       url: 'https://hack-or-snooze.herokuapp.com/stories?skip=0&limit=10',
       headers: {
@@ -94,10 +122,10 @@ $(document).ready(function () {
       method: 'POST',
       data: {
         data: {
-          username: 'mangosing',
-          title: 'something title',
-          author: 'Sean Mangosing',
-          url: 'http://www.google.com'
+          username: localStorage.getItem('username'),
+          title: `${articleTitle}`,
+          author: `${articleAuthor}`,
+          url: `${articleURL}`
         }
       }
     })
