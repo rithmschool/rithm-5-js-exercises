@@ -18,12 +18,10 @@ $(document).ready(function(){
           username: $username,
           title: $storyTitle,
           author: $author,
-          url: $storyUrl
+          url: $storyURL
 
         }
-      }
-      
-      .done(function(data){
+      }.done(function(data){
         console.log(data);
       })
     });
