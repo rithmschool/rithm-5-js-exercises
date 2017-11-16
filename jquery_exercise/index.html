@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hacker News</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+
+<!--     HEADER    -->
+        <header id="logInHeader">
+            <h2>Hack or Snooze</h2>
+            <div class="nav">
+                <div class = "submitFavorit">
+                    <span id="submitLink">submit</span> <span id="adding" class="hidden">adding</span>
+        <!--check if it will work with these line?? -->
+                    <span> &nbsp|&nbsp  </span>
+                    <span id="favoritesLink" >favorites</span> <span id="story" class="hidden">story</span>
+                </div>
+                    <span id="logOut">log out</span>
+                    <span id="allLink" class="hidden">all</span>
+                <!-- <span> &nbsp|&nbsp  </span>. -->
+            </div>
+                <span id="logIn">Log In</span>
+        </header>
+
+  
+
+ <!--   ADDING STORY PAGE FORM --> 
+   
+ <!--    ??   UNECESSERY "mainPage" SECTION   -->
+        <section id="mainPage">
+            <section id="form">
+                <form action="" id="formSubmit">
+                    <!-- <div class="formInput">
+                        <span class="text">name</span>
+                        <input type="text" id="storyName" name="storyName" required><br>
+                    </div>   -->
+                    <div class="formInput">
+                        <span class="text">title</span>
+                        <input type="text" id="title" name="title" required><br>
+                    </div>
+                    <div class="formInput">
+                        <span class="text">author</span>
+                        <input type="text" id="author" name="author" required><br>
+                    </div>
+                    <div class="formInput">
+                        <span class="url text">&nbspurl</span>
+                        <input type="URL" id="urlLink" name="url" required><br>
+                    </div>    
+                    <div class="formInput">
+                        <button type=“button”>Submit</button>
+                    </div>    
+                </form>
+            </section>
+        </section>
+        
+<!--     INITIAL PAGE     -->
+        <section id="storyPage">
+            <ol id="storyList"></ol>
+        </section>
+
+
+ <!--   LOG IN FORM  -->     
+     <form action="" id="logInForm">
+
+        <p>SIGN IN TO HACK OR SNOOZE</p>
+
+        <label for="name">Name<label/>
+        <input type="text" id="name" name="name"  required><br>
+
+        <label for="userName">Username<label/>
+        <input type="text" id="userName" name="userName"  required><br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required><br>
+         
+        <input type="submit" value="Submit" id="logInBtn" >
+        
+    </form>
+
+     <!--  NOT USING THIS SECTION AT THE MOMENT  -->
+    <section >
+        <ol id="list">
+            
+            <li>
+                <span class="empty-star">&#9734;</span>
+                <span class="full-star hidden">&#9733;</span>&nbsp
+                <a href="http://www.html.am/html-codes/character-codes/">Great HTML Char Codes</a>
+                <span class='hostDomain'>(html.am)</span>
+            </li>
+            
+
+            <li>
+                <span class="empty-star">&#9734;</span>
+                <span class="full-star hidden">&#9733;</span>&nbsp
+                <a href="http://www.smashingmagazine.com/2014/05/mystery-jquery-object-syntax-basic-introduction/">Smashing Magazine jQuery Syntax</a>
+                <span class='hostDomain'>(smashingmagazine.com)</span>
+            </li>         
+
+        </ol>
+    </section>    
+    
+    </div>
+
+        <script  src="jQueryExercise.js"></script>
+</body>
+</html>
