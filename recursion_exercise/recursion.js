@@ -5,16 +5,42 @@ function productOfArray(arr) {
 // lets make this a pure function
 //return arr[0] * productOfArray(arr.slice(1));
 
-var result = 1;
-  if (arr.length === 0){
-    return result;
-  }
 
-  for(var i = 0; i < arr.length; i++){
-    result *= arr[0] * productOfArray(arr.slice(0, i - 1));
+  if (arr.length === 1){
+    return arr[0];
   }
-  return result;
+  return arr[0] * productOfArray(arr.slice(1));
+
 }
+function collectStrings(obj){
+  // use typeof "string"
+  //input is an obj
+  //return an array of strings
+  //use helper method that does the recursion in it, but build the array outside of the helper funciton
+  var strings = [];
+    function helper(obj){
+      for (var key in obj) {
+              if (typeof obj[key] === "string"){
+                strings.push(obj[key]);
+              } else {
+                helper(obj[key])
+              }
+          
+    }
+
+
+  return strings;
+
+}
+}
+
+
+// function contains(){
+//   //input: object and value;
+//   //returns true or false if value exists in object
+//
+// }
+
 
 // function flatten(arr){
 //   var newArr = []
