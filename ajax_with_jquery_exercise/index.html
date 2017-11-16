@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hack Or Snooze</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link href="style.css" rel="stylesheet">
+	
+</head>
+<body>
+
+<div class="container main pt-2">
+	
+	<nav class="navbar">
+	  <span class="navbar-brand mb-0 h1">hackOrSnooze</span>
+	    <div id="submitArticleForm" data-children=".item">
+	  		<div class="nav-link item">
+	    		<a data-toggle="collapse" data-parent="#submitArticleForm" href="#submitArticleForm1" aria-expanded="false" aria-controls="submitArticleForm1">
+	      			submit
+	    		</a>
+	    	</div>
+		</div>	
+
+		<a class="nav-link" href="#" style="pointer-events: none">|</a>
+	    <a class="nav-link favall" href="#">favorites</a>
+
+	 
+	  	<div class="row" id="authorize">
+	  		<!-- login is here -->
+	  		<div class="dropdown">
+	  			<h6 class="dropdown-header loginHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="text">
+	  				<a href="#">login</a>
+	  			</h6>
+  				<form class="dropdown-menu p-4" id="loginForm">
+		  			<div class="form-group">
+		   		 		<label for="dropdownFormUsername2">username</label>
+		    			<input type="text" class="form-control" id="username" placeholder="username">
+		  			</div>
+		  			<div class="form-group">
+					    <label for="dropdownFormPassword2">password</label>
+					    <input type="password" class="form-control" id="userPassword" placeholder="password">
+		  			</div>
+		  			<button type="submit" class="btn btn-primary" id="loginButton">sign in</button>
+				</form>
+			</div>
+			
+			<a href="#" class="nav-link p-0 m-0" style="pointer-events: none">// </a>
+			<!-- signup is here -->
+			<div class="dropdown">
+	  			<h6 class="dropdown-header signupHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="text">
+	  				<a href="#"">sign up</a>
+	  			</h6>
+	  				<form class="dropdown-menu p-4" id="signupForm">
+			  			<div class="form-group">
+			   		 		<label for="username">name</label>
+			    			<input type="username" class="form-control" id="newUser" placeholder="name">
+			  			</div>
+			  			<div class="form-group">
+			   		 		<label for="username">username</label>
+			    			<input type="username" class="form-control" id="newUsername" placeholder="username">
+			  			</div>
+			  			<div class="form-group">
+						    <label for="userPassword">password</label>
+						    <input type="password" class="form-control" id="newUserPassword" placeholder="password">
+			  			</div>
+			  			<button type="submit" class="btn btn-primary" id="signupButton">sign up</button>
+					</form>
+			</div>
+	    		
+	    </div>		
+	</nav>
+
+	<div class="container form">
+		 	<div>
+		    	<div id="submitArticleForm1" class="panel-collapse collapse in" role="tabpanel">
+					<div class="container pt-3 pb-1" id="submitform">
+						<div class="form-check">
+							<form>
+			  					<div class="form-group row">
+		    						<label for="colFormLabel" class="col-2 col-form-label pl-5 text-right"><strong>title</strong>
+		    						</label>
+		    						<div class="col-6">
+		      							<input type="text" class="form-control" id="newTitle" placeholder="title" required>
+		    						</div>
+								</div>
+								<div class="form-group row">
+		    						<label for="colFormLabel" class="col-2 col-form-label pl-5 text-right"><strong>author</strong>
+		    						</label>
+		    						<div class="col-6">
+		      							<input type="text" class="form-control" id="newAuthor" placeholder="author" required>
+		    						</div>
+								</div>
+			 					<div class="form-group row">
+					    		<label for="colFormLabel" class="col-2 col-form-label pl-5 text-right">
+					    			<strong>url</strong>
+					    		</label>
+					    			<div class="col-6">
+					      				<input type="URL" class="form-control" id="newURL" placeholder="url">
+					    			</div>				 		 	
+					    		</div>
+					    		<div class="row pl-4 ml-5">
+				 		 			<div class="button pl-5 ml-5">
+				 		 				<div class="subbutton ml-1 pl-2">
+					    					<button type="submit" class="btn btn-secondary mr-0">submit
+					    					</button>
+					    				</div>	
+					    			</div>
+					    		</div>
+							</form>
+						</div>
+		   		</div>
+			</div>
+		</div>
+
+		<ol class="articles py-2">
+		<!-- articles go in here -->
+		</ol>
+	
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+ 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src ="script.js"></script>
+</body>
+</html>
