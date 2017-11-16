@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="flatly.css">
+  <script src="https://use.fontawesome.com/6b91cd47e2.js"></script>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+</head>
+<body>
+
+<!--Nav Bar -->
+	<nav class="navbar navbar-expand navbar-dark bg-primary">
+
+  <!--website name-->  
+    <a class="navbar-brand" href="#">Hack or Snooze</a>
+  
+  <!--submit navigation opens form-->
+    
+    <a class="nav-link text-light btn" id="navSubmit" href="#addNews" data-toggle="collapse" aria-expanded="false" aria-controls="addNews">submit</a>
+         
+  <!--favorite navigation toggles feed-->    	
+    <a class="nav-link text-light" href="#" id="toggleFeed" >favorites</a>
+
+
+
+        
+  <!--log in drop down button-->
+  <div class="mr-0 ml-auto"> 
+    <a class="nav-link dropdown dropdown-toggle text-light" href="#" id="loginNav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">log in</a>
+
+  
+  <!--login menu-->
+    <div class="dropdown-menu dropdown-menu-right bg-light p-3" style="right : 0; left : auto;" aria-labelledby="login">
+      <form class="login">
+
+      <!--username input-->
+          <label for="title">username</label>
+          <input class="form-control" type="text" id="username" placeholder="username" aria-label="username" required>
+
+      <!--password input-->
+          <label for="password">password</label>
+          <input class="form-control" type="password" id="password" placeholder="password" aria-label="password" required>
+      
+      <!--submit button-->      
+        <button id="login" class="btn btn-secondary text-center my-3" type="submit">log in</button>
+      
+      <!-- create account-->
+        <div class="dropdown-divider"></div>
+        <div>don't have an account?</div>
+        <button id="createuser" data-toggle="collapse" data-target="#createNewUser" aria-expanded="false"  aria-controls="createNewUser" class="btn btn-secondary my-2" type="submit">create account</button>
+
+      </form>
+    </div>
+  </div>  
+
+  <div class="mr-0 ml-auto d-none">
+  <!--profile drop down button-->      
+    <a class="nav-link dropdown dropdown-toggle text-light" style="position:relative; z-index: 1;" href="#" id="profileNav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">profile</a>
+
+  <!--profile menu-->
+    <div class="dropdown-menu dropdown-menu-right bg-light" style="right : 0; left : auto;" aria-labelledby="profileMenu">
+      <a class="dropdown-item px-3" href="#">favorites</a>
+      <a class="dropdown-item px-3" href="#">posts</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item px-3" href="#">log out</a>
+    </div>  
+  </div>
+</nav>
+
+
+
+
+<!--submit menu-->
+  <div class="bg-light collapse" id="addNews" aria-labelledby="addNews" aria-controls="addNews">
+    <div class="container">
+      <form class="submitItem p-3 col-6" id="needs-validation" noValidate>
+
+      <!--title input-->
+        <label for="title">title</label>
+        <input class="form-control" type="text" id="title" placeholder="title" aria-label="title" required>
+
+      <!--url input-->
+        <label for="url">url</label>
+        <input class="form-control" type="url" id="url" placeholder="url" aria-label="url" required>
+
+      <!--author input-->
+        <label for="author">author</label>
+        <input class="form-control" type="text" id="author" placeholder="author" aria-label="author" required>  
+
+      <!--submit story button-->
+        <div class="dropdown-divider"></div>
+        <button id="submit" class="btn btn-secondary" type="submit">submit</button>
+      </form>
+    </div>
+  </div>
+
+
+<!--create new user menu-->
+  <div class="bg-light collapse" id="createNewUser" aria-labelledby="createNewUser" aria-controls="createNewUser">
+    <div class="container">
+      <form class="createNewUser p-3 col-6" id="checkNewUser" noValidate>
+
+      <!--name input-->
+        <label for="newName">name</label>
+        <input class="form-control" type="name" id="newName" placeholder="name" aria-label="newName" required>
+
+      <!--username input-->
+        <label for="newUserName">username</label>
+        <input class="form-control" type="name" id="newUserName" placeholder="username" aria-label="newUserName" required>
+
+      <!--password input-->
+        <label for="newPassword">password</label>
+        <input class="form-control" type="password" id="newPassword" placeholder="password" aria-label="newPassword" required>  
+
+      <!--create new user button-->
+        <div class="dropdown-divider"></div>
+        <button id="createNewUser" class="btn btn-secondary" type="submit">create account</button>
+
+      <!--cancel button-->
+        <button id="cancelCreate" data-toggle="collapse" data-target="#createNewUser" aria-expanded="false"  aria-controls="createNewUser"class="btn btn-secondary ml-3" type="cancel">cancel</button>
+        
+      </form>
+    </div>
+  </div>
+
+
+<!--content-->
+<div>
+  <ol class="list-group" style="list-style: decimal inside;">
+  </ol>
+</div>
+
+
+
+	
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="hackSnooze.js"></script>
+
+</body>
+</html>
