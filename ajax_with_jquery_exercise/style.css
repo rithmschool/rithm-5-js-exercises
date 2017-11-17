@@ -1,0 +1,153 @@
+#wrapper {
+  font-family: sans-serif;
+  padding-bottom: 10px;
+  width: 820px;
+  margin: 0 auto;
+  margin-top: 15px;
+  border-radius: 5px;
+  background: #f5f5ee;
+}
+
+header {
+  background: #ff6338;
+  border-radius: 5px;
+}
+
+h2 {
+  display: inline-flex;
+  padding-left: 15px;
+  margin: 15px;
+}
+
+.nav {
+  display: inline-flex;
+  padding-left: 25px;
+  font-size: 1.2em;
+}
+
+.nav span {
+  padding: 0px 13px;
+}
+
+.empty-star {
+  color: #a6a299;
+}
+
+.full-star {
+  color: #a6a299;
+}
+
+.formInput
+ {
+  margin: 10px 0 0 30px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 96px;
+  background: #c0bdb5;
+  color: white;
+  border: none;
+  font-size: 0.8em;
+}
+
+.textInput {
+  width: 300px;
+  height: 35px;
+}
+
+#formSubmit,
+#authSection,
+#userProfile {
+  display: none;
+  padding: 12px 0 24px 50px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+#authSection button {
+  margin-left: 151px;
+}
+
+
+span.url {
+  margin-left: 3px;
+}
+
+input {
+  margin: 3px 0 3px 57px;
+  font-size: 0.9em;
+  padding-left: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #d8d6d0;
+  border-width: thin;
+}
+
+input#author {
+  margin-left: 33px;
+}
+
+input#loginName, {
+  margin-left: 55px;
+}
+
+input#createName {
+  margin-left: 98px;
+}
+
+input#createPassword, input#loginPassword {
+  margin-left: 59px;
+}
+ol {
+  color: #a6a299;
+}
+
+a {
+  color: black;
+}
+
+li {
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.no-list-numbers {
+  list-style: none;
+}
+
+span.hostDomain {
+  margin-left: 10px;
+}
+
+#newsLink {
+  display: inline-flex;
+}
+
+#userProfile div span {
+  font-size: 0.9em;
+  font-weight: 400;
+  margin: 3px 0 3px 3px;
+  padding-left: 20px;
+}
+
+#userProfile span.name {  
+  padding-left: 60px;
+`}
+
+#userProfile div {
+  display: flex;
+}
+
+#userProfile .hidden {
+  display : none;
+}
+
+section.profile {
+  padding-left: 30px;
+}
