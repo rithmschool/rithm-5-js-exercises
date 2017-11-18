@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body style="background-color: beige">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-danger sticky-top">
+  <div class="container">
+	  <a class="navbar-brand" href="#">Hack or Snooze</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	    <div class="navbar-nav">
+	      <a class="nav-item nav-link" id="submit" href="#">Submit</a>
+	      <a class="nav-item divider">|</a>
+	      <a class="nav-item nav-link" id = "favorites" href="#">Favorites</a>
+	    </div>
+	    <div class="navbar-nav ml-auto">
+	      <a class="nav-item nav-link ml-auto" id = "SignUp" href="javascript:void(0)" data-toggle="modal" onclick="openLoginModal();">LogIn</a>
+	    </div>
+	  </div>
+
+  </div>
+</nav>
+
+
+<!-- EXPERIMENTAL ONE -->
+    <div class="container">
+         
+     <div class="modal fade login" id="loginModal">
+          <div class="modal-dialog login animated">
+              <div class="modal-content">
+                 <div class="modal-header">
+                        <h4 class="modal-title">Login with</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">  
+                        <div class="box">
+                             <div class="content">
+                                <div class="error"></div>
+                                <div class="form loginBox">
+                                    <form method="post" action="/login" accept-charset="UTF-8" id="login-form">
+                                      <input id="login_user" class="form-control" type="text" placeholder="User Name" name="user name">
+                                      <input id="login_password" class="form-control" type="password" placeholder="Password" name="password">
+                                      <input class="btn btn-default btn-login" type="submit" value="Login">
+                                    </form>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="box">
+                            <div class="content registerBox" style="display:none;">
+                             <div class="form">
+                                <form method="post" html="{:multipart=>true}" data-remote="true" action="/register" accept-charset="UTF-8" id="create-form">
+                                  <input id="create_name" class="form-control" type="text" placeholder="Name" name="name">
+                                  <input id="create_userName" class="form-control" type="text" placeholder="User Name" name="userName">
+                                  <input id="create_password" class="form-control" type="password" placeholder="Password" name="password">
+                                  <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit">
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="forgot login-footer">
+                            <span>Looking to 
+                                 <a href="javascript: showRegisterForm();">create an account</a>
+                            ?</span>
+                        </div>
+                        <div class="forgot register-footer" style="display:none">
+                             <span>Already have an account?</span>
+                             <a href="javascript: showLoginForm();">Login</a>
+                        </div>
+                    </div>        
+              </div>
+          </div>
+      </div>
+    </div>
+
+<!-- Add modal here -->
+<!-- <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">SignUp</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Password</label>
+		    <input type="password" class="form-control" id="password" placeholder="Password">
+		  </div>
+		  
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<div class="container" id="list">
+	<div class="row">
+    <div class="col-lg-5">
+      <div>
+        <ul class="nav nav-tabs nav-justified">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">Favorited</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#panel3" role="tab">My Stories</a>
+            </li>
+        </ul>
+        <!-- Tab panels -->
+        <div class="tab-content card">
+            <!--Panel 1-->
+            <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+                <h3>Profile Information</h3>
+                <br>
+
+            </div>
+            <!--/.Panel 1-->
+            <!--Panel 2-->
+            <div class="tab-pane fade" id="panel2" role="tabpanel">
+                <h3>Favorited Stories</h3>
+                <br>
+                <ul class= "list-group">
+                  
+                </ul>
+            </div>
+            <!--/.Panel 2-->
+            <!--Panel 3-->
+            <div class="tab-pane fade" id="panel3" role="tabpanel">
+                <h3>Posted Stories</h3>
+                <br>
+                <ul class="list-group">
+                  
+                </ul>
+            </div>
+            <!--/.Panel 3-->
+        </div>
+        <form id="form">
+          <h3>Submit an Article</h3>
+          <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control urlTitle" id="inputTitle" placeholder="Title" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="staticAuthor" class="col-sm-2 col-form-label">Author</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control inputAuthor" id="inputAuthor" placeholder="Author" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">URL</label>
+            <div class="col-sm-10">
+              <input type="url" class="form-control" id="inputURL" placeholder="URL" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <ol class="urlLinks list-group col-lg-7">
+      <h2>Top Stories</h2>
+    </ol>
+	</div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
