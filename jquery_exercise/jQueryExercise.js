@@ -20,7 +20,6 @@ $(document).ready(function() {
         $("#storyList").append(`<li><a href="${url}" target="_blank">${title}</a></li>`);    
     }
   });
-
  
  // *********************** DISPLAYING LOG IN FORM  *******************************
 
@@ -84,8 +83,7 @@ $(document).ready(function() {
           // $("#logIn").attr('id', 'newID');
           // show the user their favorites
           $(".submitFavorite").show(); 
-         //$("#logIn").inner("Log Out");
-      })//?????????/DOES THE CODE BELLOW GOES HERE????????????????/
+      })
       .fail(function(){
         alert("OH NO, FAILED!!")
       })
