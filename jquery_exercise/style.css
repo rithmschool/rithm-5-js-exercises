@@ -1,0 +1,174 @@
+#wrapper {
+  font-family: sans-serif;
+  padding-bottom: 10px;
+  width: 720px;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-radius: 5px;
+  background: #f5f5ee;
+}
+
+
+#logInHeader {
+  background: #ff6338;
+  border-radius: 5px;
+}
+
+h2 {
+  display: inline-flex;
+  padding-left: 25px;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 20px;
+
+}
+
+.nav {
+  display: inline-flex;
+  padding-left: 25px;
+  font-size: 1.2em;
+  float:right;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 60px;
+}
+
+.submitFavorite{
+  /*float: left;*/
+  margin-right: 110px;
+  display: none;
+}
+
+#favoritsLink{
+  display: inline-flex;
+}
+
+#list{
+  display: none;
+}
+
+}
+.empty-star {
+  color: #a6a299;
+}
+
+.full-star {
+  color: #a6a299;
+}
+
+.formInput {
+  margin: 10px 0 0 30px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 80px;
+  background: #c0bdb5;
+  color: white;
+  border: none;
+  font-size: 0.8em;
+}
+
+#logInSubmitBtn{
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 80px;
+  background: #c0bdb5;
+  color: white;
+  border: none;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+#urlLink {
+  width: 300px;
+  height: 35px;
+}
+
+#form {
+  display: none;
+  padding: 12px 50px 24px 50px;
+  font-size: 1.2em;
+  font-weight: 600;
+
+}
+
+#logInForm{
+  padding: 12px 50px 24px 50px;
+  font-size: 1.2em;
+  font-weight: 600;
+  /*font-weight: lighter;*/
+  display:none;
+}
+
+form#logInForm p{
+  text-align: center;
+}
+
+span.url {
+    margin-left: 3px;
+}
+
+input[type=text], input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/*input {
+  margin: 3px 0 3px 47px;
+  font-size: 0.9em;
+  padding-left: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #d8d6d0;
+  border-width: thin;
+}*/
+
+ol {
+  color: #a6a299;
+}
+
+a {
+  color: black;
+}
+
+li {
+  margin-bottom: 15px;
+  margin-left: 15px;
+
+}
+
+.hidden {
+  display: none;
+}
+
+#favoriteList{
+  display:none;
+}
+
+#logIn{
+  cursor: pointer;
+}
+
+#logOut{
+  padding-left: 50px;
+}
+
