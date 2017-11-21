@@ -1,0 +1,56 @@
+#wrapper {
+	width: 600px;
+	height: 1000px;
+	background-color: #F5F5F5;
+	margin: 0 auto;
+	position: relative;
+	top: 100px;
+}
+
+h3 {
+	font-size: 30px;
+	background-color: #D2691E;
+	margin-top: 100px
+	margin: 0 auto;
+}
+
+#titlespan {
+	position: relative;
+}
+
+#urlspan {
+	position: relative;
+
+}
+
+#link1 {
+  margin-bottom: 10px;
+  position: relative;
+  left: 80px;
+  width: 200px;
+}
+
+
+#link2 {
+  margin-bottom: 10px;
+  position: relative;
+  left: 78px;
+  width: 200px;
+
+}
+
+#new-post {
+	display: none;
+  margin-bottom: 10px;
+  position: relative;
+  left: 50px;
+}
+
+#button {
+	position: relative;
+	left: 112px;
+}
+
+#list {
+	list-style: none;
+}
