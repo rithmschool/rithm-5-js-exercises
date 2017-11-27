@@ -13,12 +13,12 @@ productOfArray([1,-2,3]) // -6
 function productOfArray(arr) {
   //create var result
   if(arr.length === 0) return 0;
-  var result = 1;
-  //create helper hunction to get product
+  let result = 1;
+  //create helper function to get product
   function helper(array) {
     if(array.length === 0) return;
-    var removed = array[0] 
-    result = result * removed;
+    let removed = array[0] 
+    result *= removed;
     helper(array.slice(1));
   }
   //run helper recursive function 
@@ -53,17 +53,13 @@ collectStrings(obj) // ["foo", "bar", "baz"])
 ```
 */
 
-function collectStrings(obj,result) {
+function collectStrings(obj,result=[]) {
   //create result arr
   //base case? until no keys left (select smaller subset each time)
-  if (typeof result == 'undefined') {
-    result = []
-  }
-  
   //for in loop to go thru keys 
   //if "typeof obj['data']['val']" === 'object' then keep recursion going, if 
   //typeof obj['data']['val'] === 'string' then push  obj['data']['val'] to result.
-  for (var key in obj) {
+  for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
       if (typeof obj[key] === 'string') {
         // store string in result   
@@ -80,5 +76,65 @@ function collectStrings(obj,result) {
 }
 
   
+ // Write a function called `contains` that searches for a value in a
+ // nested object. It returns true if the object contains that value.
+
+var nestedObject = {
+        stuff: {
+          things: {
+            moreThings: {
+                awesome: "Yup!"
+            }
+          }
+        },
+        data: {
+            info: {
+                stuff: {
+                    thing: {
+                        moreStuff: {
+                            magicNumber: 44
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+function contains(object, val) {
+    return Object.keys(object).some(function(k) {
+        if (object[k] === val) {
+            return true;
+        }
+        if (typeof object[k] === 'object') {
+            return contains(object[k], val);
+        }
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
